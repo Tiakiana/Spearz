@@ -9,12 +9,23 @@ public class WhatKey : MonoBehaviour
     {
 
     }
+    string GoLow(KeyCode kc)
+    {
+        return kc.ToString().ToLower();
+
+    }
     public void detectPressedKeyOrButton()
     {
         foreach (KeyCode kcode in Enum.GetValues(typeof(KeyCode)))
         {
             if (Input.GetKeyDown(kcode))
+            {
                 Debug.Log("KeyCode down: " + kcode);
+                Debug.Log("Which would be " + GoLow(kcode));
+            
+
+                Debug.Log(""+ (int) kcode);
+            }
         }
     }    
     void Update()

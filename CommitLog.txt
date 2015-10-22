@@ -1,0 +1,1 @@
+22/10 - 2015 Second Commit. Dette er det første commit til online versionen. Button choice virker, kamp virker. Known Bug = Vinder spilleren får 2 enheder i stedet for en.
