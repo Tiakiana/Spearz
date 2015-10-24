@@ -55,7 +55,19 @@ public class StartGame : MonoBehaviour
         276,
         273,
         275,
-        274
+        274,
+        48,
+        49,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        50
+
+
 
      };
   
@@ -64,10 +76,6 @@ public class StartGame : MonoBehaviour
     public Text[] txt = new Text[4];
 
 
-    void Start()
-    {
-
-    }
 
     void Awake()
     {
@@ -136,7 +144,36 @@ public class StartGame : MonoBehaviour
                     case KeyCode.KeypadEquals:
                         s = "[equals]";
                         break;
-
+                    case KeyCode.Alpha0:
+                        s = "0";
+                        break;
+                    case KeyCode.Alpha1:
+                        s = "1";
+                        break;
+                    case KeyCode.Alpha2:
+                        s = "2";
+                        break;
+                    case KeyCode.Alpha3:
+                        s = "3";
+                        break;
+                    case KeyCode.Alpha4:
+                        s = "4";
+                        break;
+                    case KeyCode.Alpha5:
+                        s = "5";
+                        break;
+                    case KeyCode.Alpha6:
+                        s = "6";
+                        break;
+                    case KeyCode.Alpha7:
+                        s = "7";
+                        break;
+                    case KeyCode.Alpha8:
+                        s = "8";
+                        break;
+                    case KeyCode.Alpha9:
+                        s = "9";
+                        break;
                     case KeyCode.UpArrow:
                         s = "up";
                         break;
@@ -195,10 +232,6 @@ public class StartGame : MonoBehaviour
                     case KeyCode.F12:
                         s = "f12";
                         break;
-
-                        //Special keys: “backspace”, “tab”, “return”, “escape”, “space”, “delete”, “enter”, “insert”, “home”, “end”, “page up”, “page down”
-                        //“right shift”, “left shift”, “right ctrl”, “left ctrl”, “right alt”, “left alt”, “right cmd”, “left cmd”
-
                     case KeyCode.Numlock:
                         break;
                     case KeyCode.CapsLock:
@@ -251,6 +284,9 @@ public class StartGame : MonoBehaviour
                     default:
                         break;
                 }
+
+
+
                 return s;
             }
         }
@@ -294,57 +330,34 @@ public class StartGame : MonoBehaviour
         int x = 1;
         while (i < num)
         {
-          
+
             txt[i].gameObject.SetActive(true);
             if (Input.anyKeyDown)
             {
-
-             
                     foreach (KeyCode kcode in Enum.GetValues(typeof(KeyCode)))
                     {
-                    if (Input.GetKeyDown(kcode)) {
-                        keys[i] = GoLow(kcode);
-                        txt[i].text = "Player " + x + ": " + keys[i];
-                        i++;
-                        x++;
-                        Debug.Log("New code is kørende");
-                        yield return null;
-                    }
-                            
+                        if (Input.GetKeyDown(kcode)) {
+                            keys[i] = GoLow(kcode);
+                            txt[i].text = "Player " + x + ": " + keys[i];
+                            i++;
+                            x++;
+                           
+                            yield return null;
+                        }
+
 
                     }
-                    // Special keys: “backspace”, “tab”, “return”, “escape”, “space”, “delete”, “enter”, “insert”, “home”, “end”, “page up”, “page down”
-                    
-                
+             
 
-                /*
-
-            
-    Arrow keys: “up”, “down”, “left”, “right”
-    Keypad keys: “[1]”, “[2]”, “[3]”, “[+]”, “[equals]”
-    Modifier keys: “right shift”, “left shift”, “right ctrl”, “left ctrl”, “right alt”, “left alt”, “right cmd”, “left cmd”
-    Mouse Buttons: “mouse 0”, “mouse 1”, “mouse 2”, …
-    Special keys: “backspace”, “tab”, “return”, “escape”, “space”, “delete”, “enter”, “insert”, “home”, “end”, “page up”, “page down”
-    Function keys: “f1”, “f2”, “f3”, …
-
-                */
-
+                }
+                yield return null;
 
             }
-            yield return null;
-           
-        }
+        
+        
+
         Application.LoadLevel(1);
     }
 
-    /*
-    “right shift”, “left shift”, “right ctrl”, “left ctrl”, “right alt”, “left alt”, “right cmd”, “left cmd”
 
-    */
-
-    void Update()
-    {
-    
-
-    }
 }

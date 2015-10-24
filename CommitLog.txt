@@ -1,1 +1,2 @@
 22/10 - 2015 Second Commit. Dette er det første commit til online versionen. Button choice virker, kamp virker. Known Bug = Vinder spilleren får 2 enheder i stedet for en.
+24/10 - 2015 Third Commit. Spillere er nu det rigtige antal, der er stadig lidt knas med knapperne, som skal have en kærlig hånd. Pointsystem mangler og bliver implementeret som det næste

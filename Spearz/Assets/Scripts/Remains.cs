@@ -7,6 +7,9 @@ public class Remains : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         Physics.IgnoreLayerCollision(8, 9, true);
+        Physics.IgnoreLayerCollision(9, 8, true);
+        
+
 	
 	}
 	
